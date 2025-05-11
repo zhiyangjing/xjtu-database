@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  opengauss:
+    container_name: opengauss
+    image: enmotech/opengauss-lite:latest
+    privileged: true
+    user: "0:0"  # 或 user: root
+    environment:
+      - GS_PASSWORD=Secretpassword@123
+    volumes:
+      - ./enmotech/opengauss:/var/lib/opengauss
+    ports:
+      - "15432:5432"
+
+
