@@ -1,0 +1,4 @@
+CREATE DATABASE beta
+    WITH OWNER = zackary
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;

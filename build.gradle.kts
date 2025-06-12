@@ -9,6 +9,7 @@ repositories {
 
 dependencies {
     implementation("org.opengauss:opengauss-jdbc:6.0.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 }
 
 
@@ -20,9 +21,9 @@ java {
 
 sourceSets["main"].kotlin.srcDirs("src/main")
 
-application {
-    mainClass = "MainKt"
-}
+//application {
+//    mainClass = "MainKt"
+//}
 
 
 

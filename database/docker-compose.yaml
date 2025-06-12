@@ -10,7 +10,9 @@ services:
       - GS_PASSWORD=Secretpassword@123
     volumes:
       - ./enmotech/opengauss:/var/lib/opengauss
+      - ./basic_data/sql_files:/sql_files
     ports:
       - "15432:5432"
+
 
 

@@ -1,0 +1,14 @@
+server_addr = ""
+server_port = 7000
+
+[common]
+server_addr = ""
+server_port = 7000
+token = ""
+log_level = "info"
+
+[opengauss]
+type = "tcp"
+local_ip = "127.0.0.1"
+local_port = 15432
+remote_port = 4567

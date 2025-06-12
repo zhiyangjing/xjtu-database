@@ -11,7 +11,8 @@ fun main() {
         val sysConnection: Connection = DriverManager.getConnection(sysDbUrl,username,password)
         val sysStatement: Statement = sysConnection.createStatement()
 
-        val dbName = "alpha"
+//        val dbName = "alpha"
+        val dbName = "gamma"
         val checkDbQuery = "SELECT 1 FROM pg_database WHERE datname = '$dbName'"
         val rs = sysStatement.executeQuery(checkDbQuery)
 
@@ -64,6 +65,7 @@ fun main() {
                 FOREIGN KEY (course_id) REFERENCES course(course_id)
             );
         """.trimIndent())
+        println("Table 'studentcourse' created successfully")
 
         dbStatement.close()
         dbConnection.close()
@@ -72,4 +74,4 @@ fun main() {
         println("Execution failed : ${e.message}")
         e.printStackTrace()
     }
-}b
+}
